@@ -1,0 +1,131 @@
+body {
+    background: whitesmoke;
+}
+
+nav {
+    background: #78003E;
+    opacity: 0.9;
+    display: flex;
+    
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+  }
+
+.d-none {
+    display: block!important;
+}
+
+.logo {
+    width: 7.5rem;
+}
+
+/* OUTER CONTAINER */
+.tcontainer {
+    width: 100%;
+    overflow: hidden; /* Hide scroll bar */
+}
+
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+    width: 100%;
+    padding-left: 70%; /* Push contents to right side of screen */
+    background-color: #78003E;
+    color: #fff;
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move {
+    /* Basically move items from right side of screen to left in infinite loop */
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 15s;
+}
+.ticker-move:hover{
+    animation-play-state: paused; /* Pause scroll on mouse hover */
+}
+
+/* ITEMS */
+.ticker-item{
+    display: inline-block; /* Lay items in a horizontal line */
+    padding: 0 2rem;
+}
+
+/* Custom Scrollbar */
+.custom-scroll {
+    overflow-y: auto;
+    max-height: 75vh;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-right: 5px;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(120, 0, 62, 0.6);
+    background-color: rgba(120, 0, 62, 0.8);
+}
+
+.btn-purple {
+  background: #78003E;
+  width: fit-content;
+  transition: all 0.1s ease-in;
+  user-select: none;
+  color: #fff;
+}
+
+.btn-purple:hover {
+    filter: brightness(110%);
+}
+
+.btn-purple:hover {
+    background: #78003E;
+    color: #fff;
+}
+
+.btn-purple:active {
+    background: #78003E;
+    transform: scale(0.97);
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #E64164; /* Set a background color */
+    border-color: #414141;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 20px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 13px; /* Increase font size */
+    opacity: 0.9;
+    margin-bottom: 20px;
+  }
+  
+#myBtn:hover {
+    background-color: #414141; /* Add a dark-grey background on hover */
+}
+
+
